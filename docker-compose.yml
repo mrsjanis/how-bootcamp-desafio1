@@ -1,0 +1,16 @@
+version: "3"
+services:
+    postgres:
+        image: postgres
+        container_name: "pg_container"
+        environment:
+            - POSTGRES_USER=root
+            - POSTGRES_PASSWORD=root
+            - POSTGRES_DB=desafio1_db
+        ports:
+            - "5432:5432"
+        volumes:
+            - "./db:/var/lib/postgresql/data/"
+
+
+
